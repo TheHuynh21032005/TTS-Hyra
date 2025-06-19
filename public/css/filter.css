@@ -1,8 +1,9 @@
 body {
     background-color: #f7fafc;
     font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-}
-.modal-overlay {
+    margin: 0;
+  }
+  .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,33 +12,33 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     z-index: 1000;
-}
-.modal-content {
+  }
+  .modal-content {
     background-color: #fff;
-    border-radius: 0;
     width: 100%;
     max-width: none;
-    margin: 0;
+    margin: 0 auto;
     box-shadow: none;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     height: 100vh;
-}
-.modal-header {
+  }
+  .modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px 24px;
     border-bottom: 1px solid #e2e8f0;
     background-color: #f8f8f8;
-}
-.modal-header h2 {
+  }
+  .modal-header h2 {
     font-size: 18px;
     font-weight: 600;
     color: #2d3748;
-}
-.modal-header .close-btn {
+    margin: 0;
+  }
+  .close-btn {
     background: none;
     border: none;
     font-size: 24px;
@@ -46,29 +47,32 @@ body {
     padding: 0;
     line-height: 1;
     text-decoration: none;
-}
-.modal-body {
+  }
+  .modal-body {
     padding: 24px;
     overflow-y: auto;
     flex-grow: 1;
-}
-.filter-section {
+  }
+  .filter-section {
     margin-bottom: 24px;
-}
-.filter-section-title {
+  }
+  .filter-section-title {
     font-size: 16px;
     font-weight: 600;
     color: #2d3748;
     margin-bottom: 12px;
-}
-.filter-buttons-grid {
+  }
+  .filter-buttons-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
-}
-.filter-button {
+  }
+  .location-buttons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .filter-button {
     padding: 10px 12px;
-    border-radius: 8px;
+    border-radius: 9999px;
     border: 1px solid #e2e8f0;
     background-color: #f7fafc;
     color: #4a5568;
@@ -76,40 +80,35 @@ body {
     cursor: pointer;
     transition: all 0.2s ease;
     text-align: center;
-}
-.filter-button.active {
-    background-color: #fee2e2; /* Light red */
-    border-color: #ef4444; /* Red */
-    color: #ef4444; /* Red */
-    font-weight: 600;
-}
-.filter-button:hover {
+  }
+  .filter-button:hover {
     border-color: #cbd5e0;
-}
-.filter-button--pill {
-    border-radius: 9999px;
-}
-.price-range-slider {
+  }
+  .filter-button.active {
+    background-color: #fee2e2;
+    border-color: #ef4444;
+    color: #ef4444;
+    font-weight: 600;
+  }
+  .price-range-slider {
     width: 100%;
-    accent-color: #f97316; /* Orange color */
-    background: transparent; /* Make the track background transparent */
-}
-/* Remove default track styles for Webkit browsers (Chrome, Safari) */
-.price-range-slider::-webkit-slider-runnable-track {
+    accent-color: #f97316;
     background: transparent;
-}
-/* Remove default track styles for Firefox */
-.price-range-slider::-moz-range-track {
+  }
+  .price-range-slider::-webkit-slider-runnable-track {
     background: transparent;
-}
-.price-range-info {
+  }
+  .price-range-slider::-moz-range-track {
+    background: transparent;
+  }
+  .price-range-info {
     display: flex;
     justify-content: space-between;
     margin-top: 8px;
     font-size: 14px;
     color: #4a5568;
-}
-.modal-footer {
+  }
+  .modal-footer {
     padding: 16px 24px;
     border-top: 1px solid #e2e8f0;
     display: flex;
@@ -117,39 +116,34 @@ body {
     justify-content: flex-end;
     gap: 12px;
     background-color: #f8f8f8;
-}
-.reset-button {
+  }
+  .reset-button, .confirm-button {
     padding: 10px 20px;
     border-radius: 9999px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    margin-right: 35px;
+  }
+  .reset-button {
     border: 1px solid #cbd5e0;
     background-color: #fff;
     color: #4a5568;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-weight: 600;
-}
-.confirm-button {
-    padding: 10px 20px;
-    border-radius: 9999px;
+    margin-right: -5px;
+  }
+  .confirm-button {
     border: none;
-    background-color: #ef4444; /* Red */
+    background-color: #ef4444;
     color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-weight: 600;
-}
-.reset-button:hover {
+  }
+  .reset-button:hover {
     background-color: #edf2f7;
-}
-.confirm-button:hover {
-    background-color: #dc2626; /* Darker red */
-}
-.location-buttons-grid {
-    grid-template-columns: repeat(2, 1fr);
-}
-.view-more {
+  }
+  .confirm-button:hover {
+    background-color: #dc2626;
+  }
+  .view-more {
     color: #ef4444;
     font-size: 14px;
     font-weight: 500;
@@ -157,4 +151,5 @@ body {
     text-align: right;
     margin-top: 8px;
     display: block;
-}
+    text-decoration: none;
+  }
